@@ -1,0 +1,35 @@
+.messages__content{
+  margin: 110px auto 50px;
+  min-height: 300px;
+  width: 70%;
+  min-width: 670px;
+  background-color: #fff;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  grid-row-gap: 5px;
+}
+
+.dialogs{
+  padding-left: 10px;
+  padding-right: 20px;
+  border-right: 1px solid #505052;
+}
+
+.dialog{
+  margin-bottom: 15px;
+  padding: 5px
+}
+
+.dialog.active{
+  background-color: #c4b0ba65;
+  border-radius: 3px;
+}
+
+.messages{
+  padding-left: 20px;
+}
+
+.message{
+  margin-bottom: 20px;
+}

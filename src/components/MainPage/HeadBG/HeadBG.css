@@ -1,0 +1,59 @@
+.headBG{
+  height: 420px;
+  background-color: #352a31;
+  position: relative;
+  padding: 10px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.headBG__img{
+  position: absolute;
+    left: 0;
+    top: 0;
+    background: url(./images/banner.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 1;
+    background-position: center center;
+}
+
+.headBG__content{
+  position: relative;
+    height: 400px;
+    width: 1800px;
+    text-align: center;
+    z-index: 200;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.headBG__content h1 {
+    font-size: 32px;
+    line-height: 40px;
+    color: #FFF;
+    font-weight: 600;
+    margin-bottom: 17px;
+}
+
+.headBG__content p {
+    color: #d5d7db;
+    margin-bottom: 25px;
+}
+
+.headBG__register{
+  margin: 0 15px !important;
+  padding: 15px 28px;
+}
+
+
+
+.headBG__content .btn i{
+  font-size: 14px;
+  line-height: 12px;
+  font-weight: 700;
+}
+
+

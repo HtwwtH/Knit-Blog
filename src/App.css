@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+/* .app-wrapper{
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+  "h h"
+  "n c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  /* grid-gap: 10px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  grid-area: h;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header img{
+  height: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav{
+  grid-area: n;
 }
 
-.App-link {
-  color: #61dafb;
+.content{
+  grid-area: c;
+  background-color: aquamarine;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content img{
+  height: 100px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #c4b0ba65;
+}
+
+h1{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.app-wrapper{
+  min-width: 700px;
+}
+
+.container{
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+textarea{
+  font-family: 'Poppins', sans-serif;
+  color: #505052;
+  line-height: 1.2;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.btn{
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.btn.style-white{
+  background: #fff;
+  color: #7a8192;
+  border: 1px solid #7a8192;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.style-pink{
+  background: #a17088;
+  color: #fff;
+  border: 1px solid #7a819252;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.style-gray{
+  background: #eeeced;
+  color: #505052;
+  border: 1px solid #7a819252;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.hover-opacity:hover{
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.hover-pinkColor:hover{
+  cursor: pointer;
+  background:#81566b;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.hover-grayColor:hover{
+  cursor: pointer;
+  background:#a6a6a6;
+  color: #fff;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    margin-right: 10px;
+}
+
+.fa-lock{
+  color: #7a8192;
+}
+
+.fa-lock:before{
+  content: "\f023";
 }

@@ -1,0 +1,18 @@
+.post__content{
+  margin-bottom: 20px;
+}
+
+.post{
+  background-color: rgba(245, 245, 245, 0.658);
+  left: 30%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+.post__like{
+  text-align: right;
+  color: #505052;
+  line-height: 1.2;
+}
+
