@@ -1,43 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './Messages.css';
+import Dialog from './Dialog/Dialog'
+import Message from './Message/Message'
 
-const Dialog = (props) => {
-  let path = "/messages/" + props.id;
-  return (
-    <NavLink to={path}>
-      <div className='dialog active'>
-        {props.name}
-      </div >
-    </NavLink >
-  );
-}
+const Messages = (props) => {
 
-const Message = (props) => {
-  return (
-    <div className='message'>
-      {props.message}
-    </div>
-  );
-}
+  let dialogsComponents = props.state.messagesPage.dialogs.map(dialog => <Dialog id={dialog.id} name={dialog.name} />);
+  let messagesComponents = props.state.messagesPage.messages.map(mes => <Message message={mes.message} />);
 
-const Messages = () => {
-  let dialogsData = [
-    { id: '1', name: 'Ksenia' },
-    { id: '2', name: 'Evelina' },
-    { id: '3', name: 'Korina' },
-    { id: '4', name: 'Alesya Zalesya' },
-    { id: '5', name: 'Diana' }
-  ];
-
-  let messagesData = [
-    { id: '1', message: 'Hello' },
-    { id: '2', message: 'What are you knitting today?' },
-    { id: '3', message: 'Send me the scheme, please.' }
-  ]
-
-  let dialogsComponents = dialogsData.map(dialog => <Dialog id={dialog.id} name={dialog.name} />);
-  let messagesComponents = messagesData.map(m => <Message message={m.message} />);
+  let newMessage = React.createRef();
+  let sendMessage = () => {
+    let text = newMessage.current.value;
+    alert(text);
+  }
 
   return <div className='messages__content'>
     <div className='dialogs'>
@@ -48,7 +23,16 @@ const Messages = () => {
     <div className='messages'>
       <h1>Messages</h1>
       {messagesComponents}
+
+      <div className='messages__new-message'>
+        <textarea ref={newMessage} className='message__textarea textArea' placeholder='Type your message here...' ></textarea>
+        <div className='btn-row'>
+          <button onClick={sendMessage} className='posts__send-btn btn style-pink hover-pinkColor'>Send message</button>
+        </div>
+      </div>
     </div>
+
+
   </div>
 }
 

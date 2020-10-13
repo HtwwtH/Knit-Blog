@@ -12,19 +12,26 @@ import Videos from './components/Videos/Videos';
 import Settings from './components/Settings/Settings';
 
 
-const App = () => {
+const App = (props) => {
   return (
-    <BrowserRouter>
-      <div className='app-wrapper'>
-        <Header />
-        <Route path='/main-page' component={MainPage} />
-        <Route path='/profile' component={Profile} />
-        <Route path='/messages' component={Messages} />
-        <Route path='/news' component={News} />
-        <Route path='/videos' component={Videos} />
-        <Route path='/settings' component={Settings} />
-      </div>
-    </ BrowserRouter>
+
+    <div className='app-wrapper'>
+      <Header />
+      <Route path='/main-page' component={MainPage} />
+
+      <Route path='/profile' render={() => <Profile
+        state={props.state}
+        store={props.store} />} />
+
+      <Route path='/messages' render={() => <Messages
+        state={props.state}
+        store={props.store} />} />
+
+      <Route path='/news' component={News} />
+      <Route path='/videos' component={Videos} />
+      <Route path='/settings' component={Settings} />
+    </div>
+
   );
 }
 

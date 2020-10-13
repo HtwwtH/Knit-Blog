@@ -33,3 +33,7 @@
 .message{
   margin-bottom: 20px;
 }
+
+.message__textarea{
+  margin-bottom: 10px;
+}

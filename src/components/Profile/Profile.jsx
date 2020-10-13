@@ -3,10 +3,12 @@ import './Profile.css';
 import UserCard from './UserCard/UserCard';
 import Posts from './Posts/Posts';
 
-const Profile = () => {
+const Profile = (props) => {
   return <div className='profile__content'>
     <div className='profile__container container'>
-      <Posts />
+      <Posts
+        state={props.state}
+        store={props.store} />
       <UserCard />
 
 
