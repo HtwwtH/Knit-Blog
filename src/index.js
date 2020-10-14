@@ -11,16 +11,16 @@ let renderTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
-        <App state={state} store={store} />
+        <App state={state} dispatch={store.dispatch.bind(store)} />
       </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
   );
 }
 
-renderTree(store.getState());
+renderTree(store.getState());   // вызвать рендер дерева документа с актуальными данными из state
 
-store.subscribe(renderTree);
+store.subscribe(renderTree);    // подписаться на ф-цию renderTree, чтобы наблюдать за ней из store и вызывать
 
 
 

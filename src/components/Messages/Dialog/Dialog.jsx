@@ -4,9 +4,15 @@ import './../Messages.css';
 
 const Dialog = (props) => {
   let path = "/messages/" + props.id;
+
+  let setDialogClass = () => {
+    // let dialogClassName = 'dialog';
+    // if (dialogs.id === )
+  }
+
   return (
     <NavLink to={path}>
-      <div className='dialog active'>
+      <div className='dialog'>
         {props.name}
       </div >
     </NavLink >
