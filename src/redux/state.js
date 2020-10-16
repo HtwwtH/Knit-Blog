@@ -1,6 +1,11 @@
 import messagesReducer from "./messages-reducer";
 import profileReducer from "./profile-reducer";
 
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE = 'UPDATE-NEW-MESSAGE';
+
 let store = {
   _subscriber() {
     console.log('no subscribers(observers)');
@@ -51,5 +56,13 @@ let store = {
 
   }
 }
+
+export const addPostActionCreator = () => ({ type: ADD_POST });
+
+export const updateNewPostActionCreator = (text) => ({ type: UPDATE_NEW_POST, newText: text });
+
+export const addMessageActionCreator = () => ({ type: ADD_MESSAGE });
+
+export const updateMessageActionCreator = (text) => ({ type: UPDATE_NEW_MESSAGE, newText: text });
 
 export default store;

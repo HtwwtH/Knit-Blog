@@ -1,14 +1,12 @@
 import React from 'react';
 import './Profile.css';
 import UserCard from './UserCard/UserCard';
-import Posts from './Posts/Posts';
+import PostsContainer from './Posts/PostsContainer';
 
-const Profile = (props) => {
+const Profile = () => {
   return <div className='profile__content'>
     <div className='profile__container container'>
-      <Posts
-        state={props.state}
-        dispatch={props.dispatch} />
+      <PostsContainer />
       <UserCard />
 
 

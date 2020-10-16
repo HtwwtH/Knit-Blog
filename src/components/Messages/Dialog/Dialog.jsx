@@ -10,8 +10,10 @@ const Dialog = (props) => {
     // if (dialogs.id === )
   }
 
+  let name = 'dialog'
+
   return (
-    <NavLink to={path}>
+    <NavLink to={path} activeClassName={'active'}>
       <div className='dialog'>
         {props.name}
       </div >

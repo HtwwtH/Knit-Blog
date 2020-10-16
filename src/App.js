@@ -6,26 +6,22 @@ import './App.css';
 import Header from './components/Header/Header';
 import MainPage from './components/MainPage/MainPage';
 import Profile from './components/Profile/Profile';
-import Messages from './components/Messages/Messages';
+import MessagesContainer from './components/Messages/MessagesContainer';
 import News from './components/News/News';
 import Videos from './components/Videos/Videos';
 import Settings from './components/Settings/Settings';
 
 
-const App = (props) => {
+const App = () => {
   return (
 
     <div className='app-wrapper'>
       <Header />
       <Route path='/main-page' component={MainPage} />
 
-      <Route path='/profile' render={() => <Profile
-        state={props.state}
-        dispatch={props.dispatch} />} />
+      <Route path='/profile' render={() => <Profile />} />
 
-      <Route path='/messages' render={() => <Messages
-        state={props.state}
-        dispatch={props.dispatch} />} />
+      <Route path='/messages' render={() => <MessagesContainer />} />
 
       <Route path='/news' component={News} />
       <Route path='/videos' component={Videos} />

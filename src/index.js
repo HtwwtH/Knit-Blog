@@ -5,22 +5,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import store from './redux/state';
+import store from './redux/redux-store';
+import { Provider } from 'react-redux';
 
-let renderTree = (state) => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <BrowserRouter>
-        <App state={state} dispatch={store.dispatch.bind(store)} />
-      </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-}
+// let renderTree = (state) => {
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+// }
 
-renderTree(store.getState());   // вызвать рендер дерева документа с актуальными данными из state
+// renderTree(store.getState());   // вызвать рендер дерева документа с актуальными данными из store
 
-store.subscribe(renderTree);    // подписаться на ф-цию renderTree, чтобы наблюдать за ней из store и вызывать
+// store.subscribe(() => {
+//   let state = store.getState();
+//   renderTree(state);
+// });    // подписаться на ф-цию renderTree
 
 
 

@@ -18,10 +18,12 @@
 
 .dialog{
   margin-bottom: 15px;
-  padding: 5px
+  padding: 5px;
+  background-color: inherit;
+  border-radius: inherit;
 }
 
-.dialog.active{
+.active{
   background-color: #c4b0ba65;
   border-radius: 3px;
 }
